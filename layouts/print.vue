@@ -1,8 +1,8 @@
 <template>
   <v-app class="app-print">
     <div v-if="loading" class="loader">
-      <img src="/logo.svg" alt="東京都" />
-      <scale-loader color="#00A040" />
+      <img src="/logo.svg" alt="滋賀県" />
+      <scale-loader color="#00acf0" />
     </div>
     <v-container v-else>
       <v-row align="center" class="PrintMeta">
