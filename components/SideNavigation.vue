@@ -81,7 +81,7 @@
           </a>
           {{ $t('の下に提供されています。') }}
           <br />
-          2020 Tokyo Metropolitan Government
+          2020 Shiga Prefectural Government
         </small>
       </v-footer>
     </div>
@@ -126,7 +126,7 @@ export default {
         },
         {
           icon: 'mdi-account-multiple',
-          title: this.$t('都民の皆様へ'),
+          title: this.$t('県民の皆様へ'),
           link: 'https://www.metro.tokyo.lg.jp/tosei/tosei/news/2019-ncov.html'
         },
         {
@@ -136,12 +136,12 @@ export default {
           divider: true
         },
         {
-          title: this.$t('東京都新型コロナウイルス感染症対策本部報'),
+          title: this.$t('滋賀県新型コロナウイルス感染症対策本部資料'),
           link:
-            'https://www.bousai.metro.tokyo.lg.jp/taisaku/saigai/1007261/index.html'
+            'https://www.pref.shiga.lg.jp/ippan/kenkouiryouhukushi/yakuzi/310454.html'
         },
         {
-          title: this.$t('東京都主催等 中止又は延期するイベント等'),
+          title: this.$t('滋賀県主催等 中止又は延期するイベント等'),
           link:
             'https://www.seisakukikaku.metro.tokyo.lg.jp/information/event00.html'
         },
