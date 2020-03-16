@@ -45,29 +45,25 @@
       </nav>
       <v-footer class="SideNavigation-Footer">
         <div class="SideNavigation-SocialLinkContainer">
-          <a
-            href="https://line.me/R/ti/p/%40822sysfc"
-            target="_blank"
-            rel="noopener"
-          >
+          <a href="https://lin.ee/kB1USjP" target="_blank" rel="noopener">
             <img src="/line.png" alt="LINE" />
           </a>
           <a
-            href="https://twitter.com/tokyo_bousai"
+            href="https://twitter.com/watan_shiga"
             target="_blank"
             rel="noopener"
           >
             <img src="/twitter.png" alt="Twitter" />
           </a>
           <a
-            href="https://www.facebook.com/tochokoho"
+            href="https://www.facebook.com/pref.shiga"
             target="_blank"
             rel="noopener"
           >
             <img src="/facebook.png" alt="Facebook" />
           </a>
           <a
-            href="https://github.com/tokyo-metropolitan-gov/covid19"
+            href="https://github.com/shiga-pref-org/covid19"
             target="_blank"
             rel="noopener"
           >
@@ -114,7 +110,7 @@ export default {
       return [
         {
           icon: 'mdi-chart-timeline-variant',
-          title: this.$t('都内の最新感染動向'),
+          title: this.$t('県内の最新感染動向'),
           link: this.localePath('/')
         },
         {
@@ -159,8 +155,8 @@ export default {
           link: this.localePath('/about')
         },
         {
-          title: this.$t('東京都公式ホームページ'),
-          link: 'https://www.metro.tokyo.lg.jp/',
+          title: this.$t('滋賀県公式ホームページ'),
+          link: 'https://www.pref.shiga.lg.jp/',
           divider: true
         }
       ]
