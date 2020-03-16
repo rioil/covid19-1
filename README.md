@@ -1,10 +1,10 @@
-# 東京都 新型コロナウイルス感染症対策サイト
+# 滋賀県 新型コロナウイルス感染症対策サイト
 
-![](https://github.com/tokyo-metropolitan-gov/covid19/workflows/production%20deploy/badge.svg)
+![](https://github.com/shiga-pref-org/covid19/workflows/production%20deploy/badge.svg)
 
-[![東京都 新型コロナウイルス感染症対策サイト](https://user-images.githubusercontent.com/1301149/75629392-1d19d900-5c25-11ea-843d-2d4376e3a560.png)](https://stopcovid19.metro.tokyo.lg.jp/)
+[![滋賀県 新型コロナウイルス感染症対策サイト](https://user-images.githubusercontent.com/1301149/75629392-1d19d900-5c25-11ea-843d-2d4376e3a560.png)](https://stopcovid19.metro.tokyo.lg.jp/)
 
-### [日本語](./README.md) | [English](./README_EN.md) | [Spanish](./README_ES.md) | [Korean](./README_KO.md) | [Chinese (Taiwan)](./README_ZH_TW.md) | [Chinese (Simplified)](./README_ZH_CN.md) | [Vietnamese](./README_VI.md) | [Thai](./README_TH.md)
+### [日本語](./README.md) | [English](./README_EN.md)
 
 
 ## 貢献の仕方
@@ -19,9 +19,17 @@ Issues にあるいろいろな修正にご協力いただけると嬉しいで�
 ## ライセンス
 本ソフトウェアは、[MITライセンス](./LICENSE.txt)の元提供されています。
 
-## このサイトから派生したサイト
+## 本家東京版から派生したサイト
 
 [Link先](./forkedSites.md)を御覧ください。
+
+
+##　滋賀版独自の情報
+
+### 以下の方針で開発しています
+- 展開速度を優先させるため、一旦は多言語対応を実施せずにリリースします
+- 展開速度を優先させるため、一旦はflow系の機能を停止してリリースします
+- 展開後の改善を容易にするため、使用しない部分はコードの最低限の改変によってUIから削除するに留め、残りの部分はUIから見えないコード中には残存させます。
 
 ## 開発者向け情報
 
@@ -63,8 +71,13 @@ $ docker-compose run --rm app yarn install
 
 ### ステージング・本番環境への反映
 
-`master` ブランチがアップデートされると、自動的に `production` ブランチにHTML類がbuildされます。そして、本番サイト https://stopcovid19.metro.tokyo.lg.jp/ が更新されます。
+
+
+<del> `master` ブランチがアップデートされると、自動的に `production` ブランチにHTML類がbuildされます。そして、本番サイト https://stopcovid19.metro.tokyo.lg.jp/ が更新されます。
 
 `staging` ブランチがアップデートされると、自動的に `gh-pages` ブランチにHTML類がbuildされます。そして、ステージングサイト https://stg-covid19-tokyo.netlify.com/ が更新されます。
 
 `development` ブランチがアップデートされると、自動的に `dev-pages` ブランチにHTML類がbuildされます。そして、開発用サイト https://dev-covid19-tokyo.netlify.com/ が更新されます。
+</del>
+
+現在、滋賀版は開発途上です。公開サーバはありません。環境が出来次第こちらに追記予定です。
