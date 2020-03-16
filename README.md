@@ -2,7 +2,7 @@
 
 ![](https://github.com/shiga-pref-org/covid19/workflows/production%20deploy/badge.svg)
 
-[![滋賀県 新型コロナウイルス感染症対策サイト](https://user-images.githubusercontent.com/1301149/75629392-1d19d900-5c25-11ea-843d-2d4376e3a560.png)](https://stopcovid19.metro.tokyo.lg.jp/)
+[![滋賀県 新型コロナウイルス感染症対策サイト](https://github.com/Shiga-pref-org/covid19/raw/development/static/ogp.png)](https://stopcovid19.pref.shiga.lg.jp/)
 
 ### [日本語](./README.md) | [English](./README_EN.md)
 
