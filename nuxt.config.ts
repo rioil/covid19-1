@@ -22,7 +22,7 @@ const config: Configuration = {
         hid: 'description',
         name: 'description',
         content:
-          '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、滋賀県が開設したものです。'
+          '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、滋賀県と県民有志とが協働して開設したものです。'
       },
       {
         hid: 'og:site_name',
@@ -33,7 +33,7 @@ const config: Configuration = {
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://stopcovid19.pref.shiga.lg.jp'
+        content: 'https://stopcovid19.pref.shiga..jp'
       },
       {
         hid: 'og:title',
@@ -44,12 +44,12 @@ const config: Configuration = {
         hid: 'og:description',
         property: 'og:description',
         content:
-          '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、滋賀県が開設したものです。'
+          '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、滋賀県と県民有志とが協働して開設したものです。'
       },
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://stopcovid19.pref.shiga.lg.jp/ogp.png'
+        content: 'https://stopcovid19.pref.shiga.jp/ogp.png'
       },
       {
         hid: 'twitter:card',
@@ -69,7 +69,7 @@ const config: Configuration = {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: 'https://stopcovid19.pref.shiga.lg.jp/ogp.png'
+        content: 'https://stopcovid19.pref.shiga.jp/ogp.png'
       },
       {
         hid: 'fb:app_id',
