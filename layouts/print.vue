@@ -32,7 +32,7 @@
                 ※最新の情報はWebページをご覧ください
               </p>
               <p class="PrintMeta-Link">
-                https://stopcovid19.pref.shiga.lg.jp/
+                https://stopcovid19.pref.shiga.jp/
               </p>
             </v-card>
           </v-card>

@@ -80,7 +80,7 @@ export default Vue.extend({
       link: [
         {
           rel: 'canonical',
-          href: `https://stopcovid19.pref.shiga.lg.jp${this.$route.path}`
+          href: `https://stopcovid19.pref.shiga.jp${this.$route.path}`
         }
       ]
     }
