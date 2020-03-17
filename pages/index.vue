@@ -6,10 +6,6 @@
       :date="headerItem.date"
     />
     <whats-new class="mb-4" :items="newsItems" />
-    <static-info
-      class="mb-4"
-      :text="$t('自分や家族の症状に不安や心配があればまずは電話相談をどうぞ')"
-    />
     <v-row class="DataBlock">
       <confirmed-cases-number-card />
       <confirmed-cases-attributes-card />
@@ -22,7 +18,6 @@
 <script>
 import PageHeader from '@/components/PageHeader.vue'
 import WhatsNew from '@/components/WhatsNew.vue'
-import StaticInfo from '@/components/StaticInfo.vue'
 import Data from '@/data/data.json'
 import formatGraph from '@/utils/formatGraph'
 
@@ -35,7 +30,6 @@ export default {
   components: {
     PageHeader,
     WhatsNew,
-    StaticInfo,
     ConfirmedCasesNumberCard,
     ConfirmedCasesAttributesCard
   },
