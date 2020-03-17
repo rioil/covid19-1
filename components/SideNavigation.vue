@@ -124,17 +124,17 @@ export default {
           title: this.$t('お子様をお持ちの皆様へ'),
           link: this.localePath('/parent')
         },
-        {
+        /* {
           icon: 'mdi-account-multiple',
           title: this.$t('県民の皆様へ'),
           link: 'https://www.metro.tokyo.lg.jp/tosei/tosei/news/2019-ncov.html'
-        },
+        }, 
         {
           icon: 'mdi-domain',
           title: this.$t('企業の皆様・はたらく皆様へ'),
           link: this.localePath('/worker'),
           divider: true
-        },
+        }, */
         {
           title: this.$t('滋賀県新型コロナウイルス感染症対策本部会議等'),
           link:
