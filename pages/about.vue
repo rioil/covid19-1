@@ -138,6 +138,7 @@
         )
       }}
     </TextCard>
+    <!--
     <TextCard :title="$t('データについて')">
       <i18n
         tag="p"
@@ -152,7 +153,7 @@
           {{ $t('東京都オープンデータカタログサイト') }}
         </a>
       </i18n>
-    </TextCard>
+    </TextCard>-->
     <TextCard :title="$t('ソースコードについて')">
       {{
         $t(
@@ -170,11 +171,11 @@
         </a>
       </i18n>
     </TextCard>
-    <TextCard :title="$t('お問い合わせ先（都のHPサイトポリシーについて）')">
+    <!--<TextCard :title="$t('お問い合わせ先（都のHPサイトポリシーについて）')">
       {{ $t('東京都生活文化局広報広聴部広報課') }}<br />
       {{ $t('電話') }}:
       <a href="tel:03-5388-3085">03-5388-3085</a>
-    </TextCard>
+    </TextCard>-->
   </div>
 </template>
 
