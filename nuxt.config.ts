@@ -33,7 +33,7 @@ const config: Configuration = {
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://stopcovid19.pref.shiga..jp'
+        content: 'https://stopcovid19.pref.shiga.jp'
       },
       {
         hid: 'og:title',
