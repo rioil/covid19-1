@@ -148,7 +148,7 @@ export default {
         {
           title: this.$t('知事からのメッセージ'),
           link:
-            'https://www.metro.tokyo.lg.jp/tosei/governor/governor/katsudo/2020/03/03_00.html'
+            'https://www.pref.shiga.lg.jp/ippan/kenkouiryouhukushi/yakuzi/310410.html'
         },
         {
           title: this.$t('当サイトについて'),
