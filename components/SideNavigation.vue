@@ -136,7 +136,7 @@ export default {
           divider: true
         },
         {
-          title: this.$t('滋賀県新型コロナウイルス感染症対策本部資料'),
+          title: this.$t('滋賀県新型コロナウイルス感染症対策本部会議等'),
           link:
             'https://www.pref.shiga.lg.jp/ippan/kenkouiryouhukushi/yakuzi/310454.html'
         },
