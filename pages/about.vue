@@ -138,6 +138,18 @@
         )
       }}
     </TextCard>
+    <TextCard :title="$t('協力団体')">
+      {{ $t('このWebサイトの制作には、以下の市民団体が関わっています。') }}
+      <br />
+      <div>
+        <img class="corp_logo" src="/logo_c4k.png" alt="Code for Kusatsu" />
+        <img
+          class="corp_logo"
+          src="/logo_c4s-b.jpg"
+          alt="Code for Shiga/Biwako"
+        />
+      </div>
+    </TextCard>
     <!--
     <TextCard :title="$t('データについて')">
       <i18n
@@ -211,5 +223,10 @@ export default {
     list-style: none;
     padding: 12px 0;
   }
+}
+
+.corp_logo {
+  width: 30vw;
+  padding: 20px;
 }
 </style>
