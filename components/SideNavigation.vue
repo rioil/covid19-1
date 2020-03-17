@@ -81,7 +81,8 @@
           </a>
           {{ $t('の下に提供されています。') }}
           <br />
-          2020 Shiga Prefectural Government<br />Code for Kusatsu,Code for Shiga
+          2020 Shiga Prefectural Government<br />Code for Kusatsu,Code for
+          Shiga/Biwako
         </small>
       </v-footer>
     </div>
