@@ -143,7 +143,7 @@ export default {
         {
           title: this.$t('滋賀県主催等 中止又は延期するイベント等'),
           link:
-            'https://www.seisakukikaku.metro.tokyo.lg.jp/information/event00.html'
+            'https://www.pref.shiga.lg.jp/ippan/kenkouiryouhukushi/yakuzi/310183.html'
         },
         {
           title: this.$t('知事からのメッセージ'),
