@@ -43,7 +43,7 @@ export default {
             this.$t('「新型コロナウイルス感染症にかかる相談窓口について」'),
             '<a href="https://www.pref.shiga.lg.jp/ippan/kenkouiryouhukushi/yakuzi/310356.html" target="_blank" rel="noopener">https://www.pref.shiga.lg.jp/ippan/kenkouiryouhukushi/yakuzi/310356.html</a>',
             this.$t('電話相談') +
-              '<br><a href="http://www.pref.shiga.lg.jp/ippan/kenkouiryouhukushi/yakuzi/310358.html" target="_blank" rel="noopener">http://www.pref.shiga.lg.jp/ippan/kenkouiryouhukushi/yakuzi/310358.html  </a>'
+              '<br><a href="https://www.pref.shiga.lg.jp/ippan/kenkouiryouhukushi/yakuzi/310358.html" target="_blank" rel="noopener">https://www.pref.shiga.lg.jp/ippan/kenkouiryouhukushi/yakuzi/310358.html  </a>'
           ].join('<br />')
         },
         {
