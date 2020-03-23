@@ -138,18 +138,6 @@
         )
       }}
     </TextCard>
-    <TextCard :title="$t('協力団体')">
-      {{ $t('このWebサイトの制作には、以下の市民団体が関わっています。') }}
-      <br />
-      <div class="corp_grid">
-        <img class="corp_logo" src="/logo_c4k.png" alt="Code for Kusatsu" />
-        <img
-          class="corp_logo"
-          src="/logo_c4s-b.jpg"
-          alt="Code for Shiga/Biwako"
-        />
-      </div>
-    </TextCard>
     <!--
     <TextCard :title="$t('データについて')">
       <i18n
@@ -223,25 +211,5 @@ export default {
     list-style: none;
     padding: 12px 0;
   }
-}
-
-.corp_logo {
-  width: 60vw;
-  padding: 20px;
-}
-
-.corp_grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: 1fr;
-  grid-gap: 0.8em;
-  padding: 0.8em;
-  margin: 0 0 1em;
-}
-
-.corp_grid > img {
-  overflow: auto;
-  min-width: 0;
-  padding: 1em;
 }
 </style>
