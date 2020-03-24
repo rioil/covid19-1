@@ -183,6 +183,7 @@
       <h3 class="about-section">
         県内の新型コロナウイルス感染症動向に関すること
       </h3>
+      {{ $t('滋賀県健康医療福祉部薬務感染症対策課') }}<br />
       電話: <a href="tel:077-528-3292">077-528-3632</a> <br />Email:
       <a href="mailto:eh00@pref.shiga.lg.jp">eh00@pref.shiga.lg.jp</a>
     </TextCard>
