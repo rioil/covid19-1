@@ -2,8 +2,8 @@
   <v-app class="app">
     <v-overlay v-if="loading" color="#F8F9FA" opacity="1" z-index="9999">
       <div class="loader">
-        <img src="/logo.svg" alt="東京都" />
-        <scale-loader color="#00A040" />
+        <img src="/logo.svg" alt="滋賀県" />
+        <scale-loader color="#00acf0" />
       </div>
     </v-overlay>
     <div v-if="hasNavigation" class="appContainer">
@@ -80,7 +80,7 @@ export default Vue.extend({
       link: [
         {
           rel: 'canonical',
-          href: `https://stopcovid19.metro.tokyo.lg.jp${this.$route.path}`
+          href: `https://stopcovid19.pref.shiga.jp${this.$route.path}`
         }
       ]
     }

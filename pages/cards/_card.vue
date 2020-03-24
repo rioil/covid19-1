@@ -166,7 +166,7 @@ export default {
     return data
   },
   head() {
-    const url = 'https://stopcovid19.metro.tokyo.lg.jp'
+    const url = 'https://stopcovid19.pref.shiga.jp'
     const timestamp = new Date().getTime()
     const ogpImage =
       url +

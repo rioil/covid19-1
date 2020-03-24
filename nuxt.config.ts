@@ -14,7 +14,7 @@ const config: Configuration = {
     htmlAttrs: {
       prefix: 'og: http://ogp.me/ns#'
     },
-    titleTemplate: '%s | 東京都 新型コロナウイルス感染症対策サイト',
+    titleTemplate: '%s | 滋賀県 新型コロナウイルス感染症対策サイト',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -22,34 +22,34 @@ const config: Configuration = {
         hid: 'description',
         name: 'description',
         content:
-          '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、東京都が開設したものです。'
+          '当サイトは新型コロナウイルス感染症 (COVID-19) に関する最新情報を提供するために、滋賀県が県内有志の協力を得て開設したものです。'
       },
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: '東京都 新型コロナウイルス感染症対策サイト'
+        content: '滋賀県 新型コロナウイルス感染症対策サイト'
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://stopcovid19.metro.tokyo.lg.jp'
+        content: 'https://stopcovid19.pref.shiga.jp'
       },
       {
         hid: 'og:title',
         property: 'og:title',
-        content: '東京都 新型コロナウイルス感染症対策サイト'
+        content: '滋賀県 新型コロナウイルス感染症対策サイト'
       },
       {
         hid: 'og:description',
         property: 'og:description',
         content:
-          '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、東京都が開設したものです。'
+          '当サイトは新型コロナウイルス感染症 (COVID-19) に関する最新情報を提供するために、滋賀県が県内有志の協力を得て開設したものです。'
       },
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://stopcovid19.metro.tokyo.lg.jp/ogp.png'
+        content: 'https://stopcovid19.pref.shiga.jp/ogp.png'
       },
       {
         hid: 'twitter:card',
@@ -59,22 +59,22 @@ const config: Configuration = {
       {
         hid: 'twitter:site',
         name: 'twitter:site',
-        content: '@tokyo_bousai'
+        content: '@watan_shiga'
       },
       {
         hid: 'twitter:creator',
         name: 'twitter:creator',
-        content: '@tokyo_bousai'
+        content: '@watan_shiga'
       },
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: 'https://stopcovid19.metro.tokyo.lg.jp/ogp.png'
+        content: 'https://stopcovid19.pref.shiga.jp/ogp.png'
       },
       {
         hid: 'fb:app_id',
         property: 'fb:app_id',
-        content: '2879625188795443'
+        content: '2879625188795443' // TODO: replace it with the prefecture's facebook account
       }
     ],
     link: [
@@ -141,7 +141,7 @@ const config: Configuration = {
             code: 'ja',
             name: '日本語',
             iso: 'ja-JP'
-          },
+          } /*,
           {
             code: 'en',
             name: 'English',
@@ -175,7 +175,7 @@ const config: Configuration = {
             code: 'ja-basic',
             name: 'やさしい にほんご',
             iso: 'ja-JP'
-          }
+          } */
         ],
         defaultLocale: 'ja',
         vueI18n: {
@@ -205,7 +205,7 @@ const config: Configuration = {
     }
   },
   googleAnalytics: {
-    id: 'UA-159417676-1'
+    id: 'UA-160839337-1'
   },
   build: {
     postcss: {
@@ -228,8 +228,8 @@ const config: Configuration = {
     hardSource: process.env.NODE_ENV === 'development'
   },
   manifest: {
-    name: '東京都 新型コロナウイルス感染症対策サイト',
-    theme_color: '#00a040',
+    name: '滋賀県 新型コロナウイルス感染症対策サイト',
+    theme_color: '#00acf0',
     background_color: '#ffffff',
     display: 'standalone',
     Scope: '/',
@@ -239,7 +239,7 @@ const config: Configuration = {
   generate: {
     fallback: true,
     routes() {
-      const locales = ['ja', 'en', 'zh-cn', 'zh-tw', 'ko', 'ja-basic']
+      const locales = ['ja' /*, 'en', 'zh-cn', 'zh-tw', 'ko', 'ja-basic' */]
       const pages = [
         '/cards/details-of-confirmed-cases',
         '/cards/number-of-confirmed-cases',

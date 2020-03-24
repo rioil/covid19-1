@@ -7,7 +7,6 @@
       :chart-option="{}"
       :date="Data.patients.date"
       :info="sumInfoOfPatients"
-      :url="'https://catalog.data.metro.tokyo.lg.jp/dataset/t000010d0000000068'"
     />
   </v-col>
 </template>
@@ -30,7 +29,7 @@
     "10歳未満": "10歳未満",
     "男性": "男性",
     "女性": "女性",
-    "退院※": "退院※"
+    "退院": "退院"
   },
   "en": {
     "陽性患者の属性": "Confirmed patient attributes",
@@ -154,7 +153,7 @@ export default {
     // 陽性患者の属性 ヘッダー翻訳
     for (const header of patientsTable.headers) {
       header.text =
-        header.value === '退院' ? this.$t('退院※') : this.$t(header.value)
+        header.value === '退院' ? this.$t('退院') : this.$t(header.value)
     }
     // 陽性患者の属性 中身の翻訳
     for (const row of patientsTable.datasets) {
