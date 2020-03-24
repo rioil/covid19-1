@@ -171,11 +171,21 @@
         </a>
       </i18n>
     </TextCard>
-    <!--<TextCard :title="$t('お問い合わせ先（都のHPサイトポリシーについて）')">
-      {{ $t('東京都生活文化局広報広聴部広報課') }}<br />
-      {{ $t('電話') }}:
-      <a href="tel:03-5388-3085">03-5388-3085</a>
-    </TextCard>-->
+    <TextCard :title="$t('お問い合わせ先')">
+      <h3 class="about-section">
+        このウェブサイトに関すること
+      </h3>
+      {{ $t('滋賀県総合企画部情報政策課') }}<br />
+      {{ $t('電話') }}: <a href="tel:077-528-3292">077-528-3292</a><br />
+      Email:
+      <a href="mailto:it-pmo@pref.shiga.lg.jp">it-pmo@pref.shiga.lg.jp</a>
+
+      <h3 class="about-section">
+        県内の新型コロナウイルス感染症動向に関すること
+      </h3>
+      電話: <a href="tel:077-528-3292">077-528-3632</a> <br />Email:
+      <a href="mailto:eh00@pref.shiga.lg.jp">eh00@pref.shiga.lg.jp</a>
+    </TextCard>
   </div>
 </template>
 
@@ -211,5 +221,10 @@ export default {
     list-style: none;
     padding: 12px 0;
   }
+}
+
+.about-section {
+  margin-top: 20px;
+  font-weight: bold;
 }
 </style>
