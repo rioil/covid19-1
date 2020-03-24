@@ -1,7 +1,11 @@
 # 滋賀県 新型コロナウイルス感染症対策サイト
 
 ![](https://github.com/shiga-pref-org/covid19/workflows/production%20deploy/badge.svg)
+
 ![](https://github.com/shiga-pref-org/covid19/workflows/development%20deploy/badge.svg)
+
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9a8952b2-4514-4dd1-88e6-751c364b3df7/deploy-status)]((https://app.netlify.com/sites/happy-roentgen-86f936/deploys))
 
 [![滋賀県 新型コロナウイルス感染症対策サイト](https://github.com/Shiga-pref-org/covid19/raw/development/static/ogp.png)](https://stopcovid19.pref.shiga.jp/)
 
@@ -74,11 +78,6 @@ $ docker-compose run --rm app yarn install
 
 
 
-<del> `master` ブランチがアップデートされると、自動的に `production` ブランチにHTML類がbuildされます。そして、本番サイト https://stopcovid19.metro.tokyo.lg.jp/ が更新されます。
+ `master` ブランチがアップデートされると、自動的に `production` ブランチにHTML類がbuildされます。そして、本番サイト https://stopcovid19.pref.shiga.jp/ が更新されます。
 
-`staging` ブランチがアップデートされると、自動的に `gh-pages` ブランチにHTML類がbuildされます。そして、ステージングサイト https://stg-covid19-tokyo.netlify.com/ が更新されます。
-
-`development` ブランチがアップデートされると、自動的に `dev-pages` ブランチにHTML類がbuildされます。そして、開発用サイト https://dev-covid19-tokyo.netlify.com/ が更新されます。
-</del>
-
-現在、滋賀版は開発途上です。公開サーバはありません。環境が出来次第こちらに追記予定です。
+`development` ブランチがアップデートされると、自動的に `dev-pages` ブランチにHTML類がbuildされます。そして、開発用サイト https://frosty-lamarr-66d313.netlify.com/ が更新されます。
