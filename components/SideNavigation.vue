@@ -141,6 +141,11 @@ export default {
             'https://www.pref.shiga.lg.jp/ippan/kenkouiryouhukushi/yakuzi/310454.html'
         },
         {
+          title: this.$t('滋賀県の施設の状況'),
+          link:
+            'https://www.pref.shiga.lg.jp/ippan/kenkouiryouhukushi/yakuzi/310182.html'
+        },
+        {
           title: this.$t('滋賀県主催等 中止又は延期するイベント等'),
           link:
             'https://www.pref.shiga.lg.jp/ippan/kenkouiryouhukushi/yakuzi/310183.html'
