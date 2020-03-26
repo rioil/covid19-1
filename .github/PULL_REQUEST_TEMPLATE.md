@@ -1,6 +1,6 @@
 <!-- Issue 番号がない PR は受け付けません。 -->
 <!-- We don't accept PRs which has no Issue ID. -->
-
+<!--　CONTRIBUTORS.mdに追記しましたか? よければぜひご自身を追記してください。あなたの貢献に感謝します。-->
 ## 👏 解決する issue / Resolved Issues
 - close #0
 - close #0
