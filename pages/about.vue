@@ -142,7 +142,7 @@
     <TextCard :title="$t('データについて')">
       <i18n
         tag="p"
-        path="本サイトで公表しているデータは、{catalogWebsite}より誰でも自由にダウンロードが可能です。（データは順次追加予定です）"
+        :path="$t('本サイトで公表しているデータは、{catalogWebsite}より誰でも自由にダウンロードが可能です。（データは順次追加予定です）')"
       >
         <a
           href="https://portal.data.metro.tokyo.lg.jp/"
@@ -160,7 +160,7 @@
           '当サイトのソースコードはMITライセンスで公開されており、誰でも自由に利用することができます。'
         )
       }}
-      <i18n path="詳しくは、{githubRepo}をご確認ください。">
+      <i18n :path="$t('詳しくは、{githubRepo}をご確認ください。')">
         <a
           href="https://github.com/tokyo-metropolitan-gov/covid19"
           target="_blank"
