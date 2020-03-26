@@ -2,7 +2,10 @@
 
 Contributors, thank you for participating in this project!
 
-I'm Seki, the development manager. If you have any questions, feel free to ask me on Slack etc.
+We're core-team of Shiga prefecture COVID-19 task-force website project.
+If you have any questions, feel free to ask me on any way.
+
+To contact us, check one of contributors's GitHub profile and find contact address. You can tell core-team member from other contributors by checking that person does(has permisson to) merge changes to `master` or `development` branch. Only core-team member can do so.
 
 This page shows how you can contribute to the development of this site.
 
@@ -16,6 +19,8 @@ This page shows how you can contribute to the development of this site.
 * We appreciate if you give priority to the issues labelled [good first issue / help wanted / bug]
 
 ## How to participate in communications
+
+** PLEASE BEWARE THAT THIS IS NOT SHIGA-VERSION SPECIFIC WAYS **
 * If you do not have a "Code for Japan" Slack account, please register [here](https://cfjslackin.herokuapp.com/)
 * Join `#covid19` Channel
 
@@ -31,10 +36,9 @@ This page shows how you can contribute to the development of this site.
 * We also accept suggestions! Please feel free to create new issues.
 
 ## Development information
-* Development site https://dev-covid19-tokyo.netlify.com/
-* Staging site https://stg-covid19-tokyo.netlify.com/
-* Production site https://stopcovid19.metro.tokyo.lg.jp/
-* [Design](https://www.figma.com/file/V7vt80p2gauhdgTZeVNbgj/UI%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3?node-id=121%3A156)
-* [Translation Spreadsheet](https://docs.google.com/spreadsheets/d/1avT6QGInyQseYjoc_TxL8RPZfutyvrv4BtJkXfk1Nko)
+* Development site https://frosty-lamarr-66d313.netlify.com/
+* Production site https://stopcovid19.pref.shiga.jp/
+
+* [Translation Spreadsheet]...COMMING SOON!
 
 Updates to this document are also welcome!
