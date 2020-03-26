@@ -39,6 +39,6 @@ This page shows how you can contribute to the development of this site.
 * Development site https://frosty-lamarr-66d313.netlify.com/
 * Production site https://stopcovid19.pref.shiga.jp/
 
-* [Translation Spreadsheet]...COMMING SOON!
+* Translation Spreadsheet...COMMING SOON!
 
 Updates to this document are also welcome!
