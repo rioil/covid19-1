@@ -104,6 +104,7 @@ Tokyo Covid-19 response site contributors
 | [mkfsn](https://twitter.com/mkfsn) ([@mkfsn](https://github.com/mkfsn)) | Coding, i18n |
 | [Thien Le Vinh](https://github.com/omygodvt95) | Translation |
 | [Haruka Yamamoto](https://github.com/Haruka0522) ([@Haruka2003_exe](https://twitter.com/Haruka2003_exe)) ||
+| [rioil](https://github.com/rioil) ([@rioil_dev](https://twitter.com/rioil_dev)) ||
 | -add your name here!- | -what did you do?- |
 
 ご協力に感謝です！！！
