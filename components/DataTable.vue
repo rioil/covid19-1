@@ -4,6 +4,7 @@
       <span />
     </template>
     <v-data-table
+      ref="dataTable"
       :headers="chartData.headers"
       :items="chartData.datasets"
       :items-per-page="-1"
@@ -14,6 +15,9 @@
       class="cardTable"
     />
     <div class="note">
+      <template v-if="isVisibleScroll">
+        {{ $t('※横にスクロールできます') }}
+      </template>
       {{ $t('') }}
     </div>
     <template v-slot:infoPanel>
@@ -106,6 +110,25 @@ export default {
       type: String,
       required: false,
       default: ''
+    }
+  },
+  data() {
+    return {
+      isVisibleScroll: false
+    }
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.handleWindowResize)
+  },
+  mounted() {
+    window.addEventListener('resize', this.handleWindowResize)
+    this.handleWindowResize()
+  },
+  methods: {
+    handleWindowResize() {
+      this.isVisibleScroll =
+        this.$refs.dataTable.$el.firstChild.scrollWidth >
+        this.$refs.dataTable.$el.firstChild.clientWidth
     }
   }
 }
