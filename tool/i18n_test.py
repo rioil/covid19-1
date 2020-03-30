@@ -20,13 +20,23 @@ TEST_RESULT = 'result_' + datetime.datetime.now().strftime(DATETIME_FORMAT) + '.
 CHECK_DIR = ['pages', 'components']
 
 # 言語のリスト
-LANG = ['ja']
+# 1番目に書かれた言語をデフォルト言語（Vueファイル内に記載されている言語，タグ名となる）として処理します
+LANG = ['ja', 'en', 'ja-basic']
+
+# auto-i18n/に自動生成ファイルを出力するか
+AUTO_GEN = False
 
 # タグ総数
 total = 0
 
 # エラーの数
 error_count = 0
+
+# 警告の数
+warn_count = 0
+
+# チェックされたファイルの数
+file_count = 0
 
 #####処理部開始#####
 # ディレクトリ毎にテスト
@@ -37,6 +47,7 @@ for cdir in CHECK_DIR:
   os.makedirs(os.path.join(cdir, OUTPUT_DIR), exist_ok=True)
   # すべてのVueファイルを検索
   vue_files = (glob.glob(cdir + os.sep + '**' + os.sep + '*.vue', recursive=True))
+  file_count += len(vue_files)
 
   with open(os.path.join(cdir, OUTPUT_DIR, TEST_RESULT), mode='w', encoding=ENCODING) as test_result:
     # 各Vueファイルについて処理
@@ -55,18 +66,17 @@ for cdir in CHECK_DIR:
         for tag in tags:
           # 辞書に追加
           if(len(tag) > 0):
-            print(path + ': ' + tag)
             for lang in LANG:
-              tags_dict[lang][tag] = tag
+              tags_dict[lang][tag] = tag if lang == LANG[0] else ''
 
+        # テスト対象のjsonのパス
         json_path = os.path.join(os.path.dirname(path), os.path.splitext(os.path.basename(path))[0] + JSON_FILE_NAME_SUFFIX)
-        # 既存のjsonを置き換える場合は次の行を有効化して現在有効になっているwith open ~をコメントアウト
-        # with open(json_path, mode='w', encoding=ENCODING) as i18n:
 
         # テスト用にauto-i18n/に出力
-        with open(os.path.join(cdir, OUTPUT_DIR, os.path.basename(path)) + JSON_FILE_NAME_SUFFIX, mode='w', encoding=ENCODING) as i18n:
-          # json出力
-          json.dump(tags_dict, i18n, ensure_ascii=False, indent=4)
+        if(AUTO_GEN):
+          with open(os.path.join(cdir, OUTPUT_DIR, os.path.basename(path)) + JSON_FILE_NAME_SUFFIX, mode='w', encoding=ENCODING) as i18n:
+            # json出力
+            json.dump(tags_dict, i18n, ensure_ascii=False, indent=4)
 
         total += len(tags)
 
@@ -80,17 +90,29 @@ for cdir in CHECK_DIR:
                 test_result.write(','.join(['LANG', json_path, lang]) + '\n')
                 error_count += 1
                 continue
-              # タグが不足
+              # タグチェック
               for tag in tags_dict[lang]:
-                if(tag not in test_json[lang]):
-                  test_result.write(','.join(['TAG', json_path, tag]) + '\n')
+                # タグが存在する場合未翻訳のチェック
+                if(tag in test_json[lang]):
+                  if(lang != LANG[0] and test_json[lang][tag] == ''):
+                    print('WARN: ' + tag + ' (' + lang + ') may not be translated')
+                    warn_count += 1
+                    test_result.write(','.join(['WARN', json_path, tag + ' (' + lang + ')']) + '\n')
+                # タグが不足
+                else:
+                  print('TAG: ' + tag + ' (' + lang + ' ) does not exists in ' + json_path)
                   error_count += 1
+                  test_result.write(','.join(['TAG', json_path, tag + ' (' + lang + ')']) + '\n')
         # ファイルが不足
         else:
           test_result.write(','.join(['FILE', json_path, '']) + '\n')
           error_count += 1
 
-# タグ総数出力
-print('total : ' + str(total))
+# タグ総数出力（言語ごとに別のタグとして数える）
+print('total : ' + str(total * len(LANG)))
 # エラー数出力
 print('error : ' + str(error_count))
+# 警告数出力
+print('warn : ' + str(warn_count))
+# ファイル総数出力
+print('checked file: ' + str(file_count))
