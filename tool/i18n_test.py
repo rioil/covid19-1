@@ -36,6 +36,26 @@ warn_count = 0
 # チェックされたファイルの数
 file_count = 0
 
+def check_json(tags: dict, json: dict, set_value: bool, path: str, lang: str, fp) -> dict:
+  if(not isinstance(tags, dict)):
+    return {}
+  for k, v in tags.items():
+    if(isinstance(v, dict)):
+      if(k not in json):
+        json[k] = {}
+        fp.write(','.join(['TAG', path, k + ' (' + lang + ')']) + '\n')
+        print('Add TAG: ' + k + ' to ' + path)
+      json[k] = check_json(v, json[k], set_value, path, lang, fp)
+    else:
+      if(k not in json):
+        json[k] = k if set_value else ''
+        fp.write(','.join(['TAG', path, k + ' (' + lang + ')']) + '\n')
+        print('Add TAG: ' + k + ' to ' + path)
+      elif(json[k] == ''):
+        fp.write(','.join(['WARN', path, k + ' (' + lang + ')']) + '\n')
+        print('WARN: ' + k + ' (' + lang + ') in ' + path)
+  return json
+
 #####処理部開始#####
 # ディレクトリ毎にテスト
 for cdir in CHECK_DIR:
@@ -54,7 +74,19 @@ for cdir in CHECK_DIR:
         # ファイルの内容を文字列として取得
         content = ''.join([l.strip() for l in file])
         # 全タグを正規表現で取得
-        tags = [tag[4:(len(tag) - 1)] for tag in tag_pattern.findall(content) if tag[4:(len(tag) - 1)] != '']
+        tags = {}
+        for raw_tag in [tag[4:(len(tag) - 1)] for tag in tag_pattern.findall(content)]:
+          if(len(raw_tag) <= 0): continue
+          nest_struct = raw_tag.split('.')
+          nest = 'tags'
+
+          for i in range(len(nest_struct)):
+            if(nest_struct[i] not in eval(nest).keys()):
+              nest += ('["' + nest_struct[i] + '"]')
+              exec(nest + ' = {}')
+            else:
+              nest += ('["' + nest_struct[i] + '"]')
+          exec(nest + ' = ""')
 
         total += len(tags)
 
@@ -81,19 +113,7 @@ for cdir in CHECK_DIR:
               cur_json[lang] = {}
               test_result.write(','.join(['LANG', json_path, lang]) + '\n')
             # タグのチェック
-            for tag in tags:
-              # タグが存在する場合未翻訳のチェック
-              if(tag in cur_json[lang]):
-                if(lang != LANG[0] and cur_json[lang][tag] == ''):
-                  print('WARN: ' + tag + ' (' + lang + ') may not be translated')
-                  warn_count += 1
-                  test_result.write(','.join(['WARN', json_path, tag + ' (' + lang + ')']) + '\n')
-              # タグが存在しなければ追加
-              else:
-                print('Add TAG: ' + tag + ' to ' + json_path)
-                error_count += 1
-                cur_json[lang][tag] = tag if lang == LANG[0] else ''
-                test_result.write(','.join(['TAG', json_path, tag + ' (' + lang + ')']) + '\n')
+            cur_json[lang] = check_json(tags, cur_json[lang], lang == LANG[0], json_path, lang, test_result)
 
         # チェック後のjsonを保存
         with p_cur_json.open(mode='w', encoding=ENCODING) as cur_file:
@@ -102,8 +122,8 @@ for cdir in CHECK_DIR:
 # タグ総数出力（言語ごとに別のタグとして数える）
 print('total : ' + str(total * len(LANG)))
 # エラー数出力
-print('error : ' + str(error_count))
+# print('error : ' + str(error_count))
 # 警告数出力
-print('warn : ' + str(warn_count))
+# print('warn : ' + str(warn_count))
 # ファイル総数出力
 print('checked file: ' + str(file_count))
