@@ -109,7 +109,7 @@ for cdir in CHECK_DIR:
 
         # チェック後のjsonを保存
         with p_cur_json.open(mode='w', encoding=ENCODING) as cur_file:
-          json.dump(cur_json, cur_file, ensure_ascii=False, indent=4)
+          json.dump(cur_json, cur_file, ensure_ascii=False, indent=2)
 
 # タグ総数出力（言語ごとに別のタグとして数える）
 print('total : ' + str(total * len(LANG)))

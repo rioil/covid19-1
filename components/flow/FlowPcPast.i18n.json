@@ -14,7 +14,9 @@
     "かつ": "かつ",
     "発熱{temperature}": "発熱{temperature}",
     "{tempNum}以上": "{tempNum}以上",
-    "37.5℃": "37.5℃"
+    "37.5℃": "37.5℃",
+    "COVID-19 prevalent area": "COVID-19 prevalent area",
+    "in close contact": "in close contact"
   },
   "en": {
     "{past}の出来ごとと症状": "{past}, if you have...",
@@ -111,6 +113,8 @@
     "かつ": "",
     "発熱{temperature}": "{temperature} たかいねつが あるひと",
     "{tempNum}以上": "{tempNum}より",
-    "37.5℃": "37.5℃"
+    "37.5℃": "37.5℃",
+    "COVID-19 prevalent area": "",
+    "in close contact": ""
   }
 }

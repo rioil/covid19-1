@@ -76,7 +76,7 @@ for cdir in CHECK_DIR:
         if(AUTO_GEN):
           with open(os.path.join(cdir, OUTPUT_DIR, os.path.basename(path)) + JSON_FILE_NAME_SUFFIX, mode='w', encoding=ENCODING) as i18n:
             # json出力
-            json.dump(tags_dict, i18n, ensure_ascii=False, indent=4)
+            json.dump(tags_dict, i18n, ensure_ascii=False, indent=2)
 
         total += len(tags)
 
